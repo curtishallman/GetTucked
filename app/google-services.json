@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "724099195591",
+    "firebase_url": "https://gettucked-f51bc.firebaseio.com",
+    "project_id": "gettucked-f51bc",
+    "storage_bucket": "gettucked-f51bc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:724099195591:android:81bb19c05706dd9cd314e2",
+        "android_client_info": {
+          "package_name": "com.example.gettucked"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "724099195591-u97ftpe2l6b724ctrilvdvla5f7071k7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gettucked",
+            "certificate_hash": "df11b574f692b3529d3953c258db9bf0ea68dfe6"
+          }
+        },
+        {
+          "client_id": "724099195591-8mofko8t8r9oq2rubvpes9f6925a0a4p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEotQ8sPUrZCKHTsCxFzW2QERnC7ntumk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "724099195591-8mofko8t8r9oq2rubvpes9f6925a0a4p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -20,6 +20,7 @@ public class HomeFragment extends Fragment {
         TextView kamloops = (TextView)view.findViewById(R.id.textView_kamloops);
 
 
+
         kamloops.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

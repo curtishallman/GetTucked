@@ -3,20 +3,18 @@ package com.example.gettucked;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link SandmanFragment#newInstance} factory method to
+ * Use the {@link PlazaFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class SandmanFragment extends Fragment {
+public class PlazaFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -26,7 +24,7 @@ public class SandmanFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public SandmanFragment() {
+    public PlazaFragment() {
         // Required empty public constructor
     }
 
@@ -36,11 +34,11 @@ public class SandmanFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment SandmanFragment.
+     * @return A new instance of fragment PlazaFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static SandmanFragment newInstance(String param1, String param2) {
-        SandmanFragment fragment = new SandmanFragment();
+    public static PlazaFragment newInstance(String param1, String param2) {
+        PlazaFragment fragment = new PlazaFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -60,11 +58,7 @@ public class SandmanFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_sandman, container, false);
-
-
-
         // Inflate the layout for this fragment
-        return view;
+        return inflater.inflate(R.layout.fragment_plaza, container, false);
     }
 }

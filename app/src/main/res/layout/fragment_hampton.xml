@@ -5,15 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#03A9F4"
-    tools:context=".SandmanFragment">
+    tools:context=".HamptonFragment">
 
+    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:id="@+id/textView_title"
         android:layout_width="407dp"
         android:layout_height="60dp"
         android:background="#2196F3"
         android:gravity="center"
-        android:text="Sandman Signature"
+        android:text="Hampton Inn"
         android:textColor="@android:color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -30,7 +31,7 @@
         android:layout_marginTop="72dp"
         android:background="#2196F3"
         android:gravity="center"
-        android:text="$113"
+        android:text="$99"
         android:textColor="@android:color/white"
         android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,7 +73,7 @@
         android:layout_height="38dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="32dp"
-        android:text="- Pool"
+        android:text="- Great pool"
         android:textColor="@android:color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -82,6 +83,7 @@
         android:id="@+id/textView16"
         android:layout_width="137dp"
         android:layout_height="44dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="28dp"
         android:text="- Free Parking"
         android:textColor="@android:color/white"
@@ -91,10 +93,10 @@
 
     <TextView
         android:id="@+id/textView17"
-        android:layout_width="135dp"
-        android:layout_height="43dp"
-        android:layout_marginEnd="28dp"
-        android:text="- Bar"
+        android:layout_width="157dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="4dp"
+        android:text="- Great breakfast"
         android:textColor="@android:color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -104,6 +106,7 @@
         android:id="@+id/textView18"
         android:layout_width="139dp"
         android:layout_height="51dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="24dp"
         android:text="- Great location"
         android:textColor="@android:color/white"
@@ -113,11 +116,10 @@
 
     <TextView
         android:id="@+id/textView19"
-        android:layout_width="141dp"
-        android:layout_height="175dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="24dp"
-        android:text="Airy rooms with free Wi-Fi in a bright hotel featuring a trendy sports bar and indoor pool"
+        android:layout_width="190dp"
+        android:layout_height="176dp"
+        android:gravity="center"
+        android:text="Modern hotel with a free hot breakfast and WiFi, plus a business centre and an indoor pool"
         android:textColor="@android:color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -129,7 +131,7 @@
         android:layout_height="100dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/sandman"
+        android:background="@drawable/hampton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_cost" />
 
@@ -139,7 +141,7 @@
         android:layout_height="100dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/sandmanpool"
+        android:background="@drawable/hamptonpool"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
@@ -149,7 +151,7 @@
         android:layout_height="100dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/sandmanroom"
+        android:background="@drawable/hamptonroom"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 

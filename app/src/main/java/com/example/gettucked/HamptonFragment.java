@@ -3,10 +3,12 @@ package com.example.gettucked;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 
 /**
@@ -59,6 +61,25 @@ public class HamptonFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_hampton, container, false);
+        View view = inflater.inflate(R.layout.fragment_hampton, container, false);
+
+        TextView book = (TextView) view.findViewById(R.id.textView_book);
+        final TextView title = (TextView) view.findViewById(R.id.textView_title);
+        final TextView cost = (TextView) view.findViewById(R.id.textView_cost);
+
+        book.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle bundle = new Bundle();
+                bundle.putString("key", title.getText().toString());
+                bundle.putString("key2", cost.getText().toString());
+                BookFragment fragment = new BookFragment();
+                fragment.setArguments(bundle);
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_container,fragment).addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });
+        return view;
     }
 }

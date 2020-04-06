@@ -9,7 +9,7 @@
     <TextView
         android:id="@+id/textView_kamloops"
         android:layout_width="413dp"
-        android:layout_height="85dp"
+        android:layout_height="120dp"
         android:background="@drawable/kamloops"
         android:gravity="center"
         android:onClick="replaceFragment"
@@ -18,15 +18,15 @@
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.224" />
+        app:layout_constraintVertical_bias="0.219" />
 
     <TextView
         android:id="@+id/textView_vancouver"
         android:layout_width="413dp"
-        android:layout_height="85dp"
+        android:layout_height="120dp"
         android:background="@drawable/vancouver"
         android:gravity="center"
         android:text="Vancouver"
@@ -37,12 +37,12 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.356" />
+        app:layout_constraintVertical_bias="0.415" />
 
     <TextView
         android:id="@+id/textView_kelowna"
         android:layout_width="413dp"
-        android:layout_height="85dp"
+        android:layout_height="120dp"
         android:background="@drawable/kelowna"
         android:clickable="false"
         android:gravity="center"
@@ -54,7 +54,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.487" />
+        app:layout_constraintVertical_bias="0.612" />
 
     <TextView
         android:id="@+id/textView_title"
@@ -73,15 +73,25 @@
 
     <TextView
         android:id="@+id/textView_info"
-        android:layout_width="403dp"
-        android:layout_height="62dp"
-        android:text="Select a location below to get started!"
+        android:layout_width="410dp"
+        android:layout_height="25dp"
+        android:fontFamily="sans-serif-thin"
+        android:text="Choose your destination!"
         android:textColor="@android:color/white"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.107" />
+        app:layout_constraintVertical_bias="0.127" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="670dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

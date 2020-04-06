@@ -1,22 +1,21 @@
 package com.example.gettucked;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link RamadaFragment#newInstance} factory method to
+ * Use the {@link BestWesternFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class RamadaFragment extends Fragment {
+public class BestWesternFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -26,7 +25,7 @@ public class RamadaFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public RamadaFragment() {
+    public BestWesternFragment() {
         // Required empty public constructor
     }
 
@@ -36,11 +35,11 @@ public class RamadaFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment RamadaFragment.
+     * @return A new instance of fragment SandmanFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static RamadaFragment newInstance(String param1, String param2) {
-        RamadaFragment fragment = new RamadaFragment();
+    public static BestWesternFragment newInstance(String param1, String param2) {
+        BestWesternFragment fragment = new BestWesternFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -60,9 +59,7 @@ public class RamadaFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_ramada, container, false);
-
+        View view = inflater.inflate(R.layout.fragment_bestwestern, container, false);
         TextView book = (TextView) view.findViewById(R.id.textView_book);
         final TextView title = (TextView) view.findViewById(R.id.textView_title);
         final TextView cost = (TextView) view.findViewById(R.id.textView_cost);
@@ -70,9 +67,9 @@ public class RamadaFragment extends Fragment {
         book.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Bundle bundle = new Bundle();
-                bundle.putString("key", title.getText().toString());
-                bundle.putString("key2", cost.getText().toString());
+               Bundle bundle = new Bundle();
+               bundle.putString("key", title.getText().toString());
+               bundle.putString("key2", cost.getText().toString());
                 BookFragment fragment = new BookFragment();
                 fragment.setArguments(bundle);
                 FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
@@ -80,6 +77,9 @@ public class RamadaFragment extends Fragment {
                 fragmentTransaction.commit();
             }
         });
+
+
+        // Inflate the layout for this fragment
         return view;
     }
 }

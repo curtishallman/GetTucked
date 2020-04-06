@@ -4,8 +4,6 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,25 +13,20 @@ import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link KamloopsFragment#newInstance} factory method to
+ * Use the {@link KelownaFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class KamloopsFragment extends Fragment {
+public class KelownaFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    String s1[], s2[];
-    RecyclerView recyclerView;
-    int images[] = {R.drawable.sandman, R.drawable.holiday, R.drawable.ramada};
-
-
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
-    public KamloopsFragment() {
+    public KelownaFragment() {
         // Required empty public constructor
     }
 
@@ -43,11 +36,11 @@ public class KamloopsFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment KamloopsFragment.
+     * @return A new instance of fragment KelownaFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static KamloopsFragment newInstance(String param1, String param2) {
-        KamloopsFragment fragment = new KamloopsFragment();
+    public static KelownaFragment newInstance(String param1, String param2) {
+        KelownaFragment fragment = new KelownaFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -58,7 +51,6 @@ public class KamloopsFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -68,7 +60,8 @@ public class KamloopsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_kamloops, container, false);
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_kelowna, container, false);
 
         TextView ramada = (TextView) view.findViewById(R.id.textView_ramada);
         TextView holiday = (TextView) view.findViewById(R.id.textView_holiday);
@@ -80,7 +73,7 @@ public class KamloopsFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container, new RamadaFragment()).addToBackStack(null);
+                fragmentTransaction.replace(R.id.fragment_container, new RoyalKelownaFragment()).addToBackStack(null);
                 fragmentTransaction.commit();
             }
         });
@@ -89,7 +82,7 @@ public class KamloopsFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container, new HolidayFragment()).addToBackStack(null);
+                fragmentTransaction.replace(R.id.fragment_container, new BestWesternFragment()).addToBackStack(null);
                 fragmentTransaction.commit();
             }
         });
@@ -98,7 +91,7 @@ public class KamloopsFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container, new SandmanFragment()).addToBackStack(null);
+                fragmentTransaction.replace(R.id.fragment_container, new DaysInnFragment()).addToBackStack(null);
                 fragmentTransaction.commit();
             }
         });
@@ -107,7 +100,7 @@ public class KamloopsFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container, new HamptonFragment()).addToBackStack(null);
+                fragmentTransaction.replace(R.id.fragment_container, new DeltaFragment()).addToBackStack(null);
                 fragmentTransaction.commit();
             }
         });
@@ -116,14 +109,10 @@ public class KamloopsFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container, new PlazaFragment()).addToBackStack(null);
+                fragmentTransaction.replace(R.id.fragment_container, new CoastCapriFragment()).addToBackStack(null);
                 fragmentTransaction.commit();
             }
         });
-
-
         return view;
     }
-
-
 }

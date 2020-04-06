@@ -39,7 +39,7 @@
                 android:gravity="center"
                 android:text="Holiday Inn"
                 android:textColor="@android:color/white"
-                android:textSize="25sp"
+                android:textSize="30sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -50,7 +50,7 @@
                 android:gravity="center"
                 android:text="Ramada"
                 android:textColor="@android:color/white"
-                android:textSize="25sp"
+                android:textSize="30sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -61,7 +61,7 @@
                 android:gravity="center"
                 android:text="Sandman"
                 android:textColor="@android:color/white"
-                android:textSize="25sp"
+                android:textSize="30sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -72,7 +72,8 @@
                 android:gravity="center"
                 android:text="Hampton Inn"
                 android:textColor="@android:color/white"
-                android:textSize="25sp" />
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView_plaza"
@@ -82,22 +83,24 @@
                 android:gravity="center"
                 android:text="The Plaza Hotel"
                 android:textColor="@android:color/white"
-                android:textSize="25sp" />
+                android:textSize="30sp"
+                android:textStyle="bold" />
         </LinearLayout>
     </ScrollView>
 
     <TextView
         android:id="@+id/textView21"
-        android:layout_width="179dp"
-        android:layout_height="59dp"
+        android:layout_width="337dp"
+        android:layout_height="90dp"
         android:gravity="center"
         android:text="Kamloops Hotels"
-        android:textColor="@android:color/black"
-        android:textSize="25sp"
+        android:textColor="@android:color/white"
+        android:textSize="35sp"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.147" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

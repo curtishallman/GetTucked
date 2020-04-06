@@ -4,152 +4,159 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#03A9F4"
+    android:background="#FFFFFF"
     tools:context=".PlazaFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
     <TextView
         android:id="@+id/textView_title"
         android:layout_width="407dp"
         android:layout_height="60dp"
-        android:background="#2196F3"
+        android:background="    #FFFFFF"
+        android:fontFamily="cursive"
         android:gravity="center"
         android:text="The Plaza Hotel"
-        android:textColor="@android:color/white"
-        android:textSize="20sp"
+        android:textColor="#000000"
+        android:textSize="45sp"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.001" />
-
-    <TextView
-        android:id="@+id/textView_cost"
-        android:layout_width="138dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="72dp"
-        android:background="#2196F3"
-        android:gravity="center"
-        android:text="$63"
-        android:textColor="@android:color/white"
-        android:textSize="25sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView_book"
         android:layout_width="138dp"
         android:layout_height="51dp"
-        android:layout_marginTop="16dp"
-        android:background="#2196F3"
+        android:layout_marginTop="20dp"
+        android:background="    #FFFFFF"
         android:gravity="center"
         android:text="Book Now"
-        android:textColor="@android:color/white"
+        android:textColor="#000000"
         android:textSize="25sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.146"
+        app:layout_constraintHorizontal_bias="0.465"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
-
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="152dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="72dp"
-        android:background="#2196F3"
-        android:gravity="center"
-        android:text="Accomodations"
-        android:textColor="@android:color/white"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.816"
-        app:layout_constraintStart_toEndOf="@+id/textView_cost"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="156dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="8dp"
-        android:text="- Laundry Service"
-        android:textColor="@android:color/white"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="137dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="28dp"
-        android:text="- Paid Parking"
-        android:textColor="@android:color/white"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="157dp"
-        android:layout_height="46dp"
-        android:layout_marginEnd="8dp"
-        android:text="- Free breakfast"
-        android:textColor="@android:color/white"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintVertical_bias="0.073" />
 
     <TextView
         android:id="@+id/textView18"
         android:layout_width="137dp"
         android:layout_height="54dp"
-        android:layout_marginEnd="28dp"
+        android:layout_marginEnd="36dp"
         android:text="- Restauraunt w/ bar"
-        android:textColor="@android:color/white"
+        android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
     <TextView
-        android:id="@+id/textView19"
-        android:layout_width="190dp"
-        android:layout_height="176dp"
-        android:gravity="center"
-        android:text="Modern hotel with a free hot breakfast and WiFi, plus a business centre and an indoor pool"
-        android:textColor="@android:color/white"
+        android:id="@+id/textView16"
+        android:layout_width="137dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="36dp"
+        android:text="- Paid Parking"
+        android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <TextView
+        android:id="@+id/textView_cost"
+        android:layout_width="138dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="64dp"
+        android:background="    #FFFFFF"
+        android:gravity="center"
+        android:text="$63"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="200dp"
         android:layout_height="100dp"
-        android:layout_marginStart="15dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/plaza"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_cost" />
 
     <TextView
+        android:id="@+id/textView14"
+        android:layout_width="152dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="64dp"
+        android:background="    #FFFFFF"
+        android:gravity="center"
+        android:text="Accomodations"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.717"
+        app:layout_constraintStart_toEndOf="@+id/textView_cost"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="142dp"
+        android:layout_height="168dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="center"
+        android:text="Modern hotel with a free hot breakfast and WiFi, plus a business centre and an indoor pool"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="157dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="16dp"
+        android:text="- Free breakfast"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <TextView
         android:id="@+id/textView11"
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="199dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/plazaroom"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <TextView
+        android:id="@+id/textView15"
+        android:layout_width="156dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:text="- Laundry Service"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <TextView
         android:id="@+id/textView12"
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="203dp"
+        android:layout_height="105dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/plazaold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />

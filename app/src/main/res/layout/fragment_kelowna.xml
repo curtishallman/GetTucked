@@ -40,7 +40,7 @@
                 android:gravity="center"
                 android:text="Best Western Plus"
                 android:textColor="@android:color/white"
-                android:textSize="25sp"
+                android:textSize="30sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -51,7 +51,7 @@
                 android:gravity="center"
                 android:text="The Royal Kelowna"
                 android:textColor="@android:color/white"
-                android:textSize="25sp"
+                android:textSize="30sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -62,7 +62,7 @@
                 android:gravity="center"
                 android:text="Days Inn"
                 android:textColor="@android:color/white"
-                android:textSize="25sp"
+                android:textSize="30sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -73,7 +73,8 @@
                 android:gravity="center"
                 android:text="Delta Hotels"
                 android:textColor="@android:color/white"
-                android:textSize="25sp" />
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView_plaza"
@@ -83,18 +84,20 @@
                 android:gravity="center"
                 android:text="Coast Capri Hotel"
                 android:textColor="@android:color/white"
-                android:textSize="25sp" />
+                android:textSize="30sp"
+                android:textStyle="bold" />
         </LinearLayout>
     </ScrollView>
 
     <TextView
         android:id="@+id/textView21"
-        android:layout_width="179dp"
-        android:layout_height="59dp"
+        android:layout_width="242dp"
+        android:layout_height="72dp"
         android:gravity="center"
         android:text="Kelowna Hotels"
-        android:textColor="@android:color/black"
-        android:textSize="25sp"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

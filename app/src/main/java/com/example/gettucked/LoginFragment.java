@@ -16,6 +16,8 @@ import android.widget.Button;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
+import static com.example.gettucked.MainActivity.profileFragment;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -90,6 +92,8 @@ public class LoginFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 String emailInput = email.getEditText().getText().toString().trim();
+                Bundle bundle = new Bundle();
+                bundle.putString("email",emailInput);
 
                 if (emailInput.isEmpty()) {
                     email.setError("Field cant be empty");
@@ -98,8 +102,9 @@ public class LoginFragment extends Fragment {
                     email.setError("Please enter a valid email address");
                     return;
                 } else {
-                    email.setError(null);
+                    profileFragment.setArguments(bundle);
                     ((LoginActivity) getActivity()).openMainActivity();
+
                 }
             }
         });

@@ -9,8 +9,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
+
+import static com.example.gettucked.MainActivity.profileFragment;
 
 
 /**
@@ -68,16 +71,35 @@ public class SignUpFragment extends Fragment {
         final TextInputLayout email = view.findViewById(R.id.textInputEmail);
         final TextInputLayout password = view.findViewById(R.id.textInputPassword);
         final TextInputLayout confirm = view.findViewById(R.id.textInputConfirm);
+        final TextInputLayout firstName = view.findViewById(R.id.TextInputFirstName);
+        final TextInputLayout lastName = view.findViewById(R.id.TextInputLastName);
         Button submit = view.findViewById(R.id.signUpBtn2);
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                String firstNameInput = firstName.getEditText().getText().toString().trim();
+                String lastNameInput = lastName.getEditText().getText().toString().trim();
                 String emailInput = email.getEditText().getText().toString().trim();
                 String passInput = password.getEditText().getText().toString().trim();
                 String confirmPass = confirm.getEditText().getText().toString().trim();
                 Boolean validEmail = false;
                 Boolean validPass = false;
+                Boolean validName = false;
+                Bundle bundle = new Bundle();
+                bundle.putString("name", firstNameInput);
+                bundle.putString("lastName", lastNameInput);
+                bundle.putString("email", emailInput);
+                if(firstNameInput.isEmpty()){
+                    firstName.setError("Field cannot be empty!");
+                }
+                if(lastNameInput.isEmpty()){
+                    lastName.setError("Field cannot be empty!");
+                }
+                if(!lastNameInput.isEmpty() && !firstNameInput.isEmpty()){
+                    validName = true;
+                }
 
                 if (emailInput.isEmpty()) {
                     email.setError("Field cant be empty");
@@ -86,7 +108,7 @@ public class SignUpFragment extends Fragment {
                     email.setError("Please enter a valid email address");
                     return;
                 } else {
-                    email.setError(null);
+
                     validEmail = true;
                 }
                 if(passInput.isEmpty() || confirmPass.isEmpty()){
@@ -98,7 +120,12 @@ public class SignUpFragment extends Fragment {
                 }else{
                     validPass = true;
                 }
-                if(validPass == true && validEmail == true){
+
+
+
+                if(validPass == true && validEmail == true && validName == true){
+
+                    profileFragment.setArguments(bundle);
                     ((LoginActivity) getActivity()).openMainActivity();
                 }
 

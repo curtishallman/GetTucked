@@ -1,5 +1,8 @@
 package com.example.gettucked;
 
+import android.app.DatePickerDialog;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,10 +13,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import java.util.Calendar;
+import java.util.Date;
 
 
 /**
@@ -27,6 +34,9 @@ public class BookFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     public int count;
+    private DatePickerDialog.OnDateSetListener onDateSetListener;
+    private DatePickerDialog.OnDateSetListener onDateSetListener2;
+
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -68,35 +78,89 @@ public class BookFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_book, container, false);
-        MainActivity xxx = (MainActivity) getActivity();
+        final MainActivity xxx = (MainActivity) getActivity();
 
         final TextView title = view.findViewById(R.id.textView_title);
         final TextView price = view.findViewById(R.id.textView_price);
-        final EditText checkin = view.findViewById(R.id.editText_checkin);
-        final EditText checkout = view.findViewById(R.id.editText_checkout);
+        final TextView checkin = view.findViewById(R.id.editText_checkin);
+        final TextView checkout = view.findViewById(R.id.editText_checkout);
         Button confirm = view.findViewById(R.id.button_confirm);
+
+       checkin.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Calendar cal = Calendar.getInstance();
+                int year = cal.get(Calendar.YEAR);
+                int month = cal.get(Calendar.MONTH);
+                int day = cal.get(Calendar.DAY_OF_MONTH);
+
+               DatePickerDialog dialog = new DatePickerDialog(xxx,onDateSetListener, year, month, day);
+               dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.GRAY));
+               dialog.show();
+           }
+       });
+       checkout.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Calendar cal = Calendar.getInstance();
+               int year = cal.get(Calendar.YEAR);
+               int month = cal.get(Calendar.MONTH);
+               int day = cal.get(Calendar.DAY_OF_MONTH);
+
+               DatePickerDialog dialog2 = new DatePickerDialog(xxx,onDateSetListener2, year, month, day);
+               dialog2.getWindow().setBackgroundDrawable(new ColorDrawable(Color.GRAY));
+               dialog2.show();
+           }
+       });
+       onDateSetListener = new DatePickerDialog.OnDateSetListener() {
+           @Override
+           public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+             month = month + 1;
+             String date = month + "/" + dayOfMonth + "/" + year;
+             checkin.setText(date);
+           }
+       };
+        onDateSetListener2 = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                month = month + 1;
+                String date = month + "/" + dayOfMonth + "/" + year;
+                checkout.setText(date);
+            }
+        };
+
+
         Bundle bundle = this.getArguments();
         String data = bundle.getString("key");
         String data2 = bundle.getString("key2");
         title.setText(data);
         price.setText(data2);
 
+
         confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Bundle bundle = new Bundle();
+                Boolean options = false;
+                final String checkIn = checkin.getText().toString();
+                final String checkOut = checkout.getText().toString();
                 bundle.putString("title", title.getText().toString());
                 bundle.putString("price", price.getText().toString());
                 bundle.putString("checkin", checkin.getText().toString());
                 bundle.putString("checkout", checkout.getText().toString());
 
-
-                MainActivity.bookingsFragment.setArguments(bundle);
-
-
-                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container, MainActivity.bookingsFragment).addToBackStack(null);
-                fragmentTransaction.commit();
+                if (checkIn.isEmpty()) {
+                    checkin.setError("Please select a date!");
+                }
+                if (checkOut.isEmpty()) {
+                    checkout.setError("Please select a date!");
+                }
+                if (!checkOut.isEmpty() && !checkIn.isEmpty()) {
+                    MainActivity.bookingsFragment.setArguments(bundle);
+                    FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                    fragmentTransaction.replace(R.id.fragment_container, MainActivity.bookingsFragment).addToBackStack(null);
+                    fragmentTransaction.commit();
+                }
             }
         });
         return view;

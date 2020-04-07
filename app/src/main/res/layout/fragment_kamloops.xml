@@ -7,8 +7,8 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="406dp"
-        android:layout_height="274dp"
+        android:layout_width="410dp"
+        android:layout_height="281dp"
         android:background="@drawable/skiing"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -16,8 +16,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
-        android:layout_width="416dp"
-        android:layout_height="253dp"
+        android:layout_width="411dp"
+        android:layout_height="343dp"
         android:layout_marginTop="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
